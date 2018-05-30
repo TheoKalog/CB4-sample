@@ -1,11 +1,10 @@
 # Messaging Application
 
 
-*This is a console application where there are 4 types of users: <br/>
+*This is a console application where there are 4 types of users: <br/><br/>
                                                               1.Visitor(send message and view all messages)<br/>
-                                                          2.Customer(send message,view all messages and edit message)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                3.Moderator(send message,view all messages,edit & delete        
-                                                                                                                 message)
+                                                          2.Customer(send message,view all messages and edit message)<br/>
+                                                    3.Moderator(send message,view all messages,edit & delete message)<br/>
                                                                 4.Administrator(CRUD)
                                                                 
                                            
