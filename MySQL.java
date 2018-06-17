@@ -82,7 +82,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -90,7 +89,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -120,15 +118,11 @@ public class MySQL {
 		      int i=1;
 			while (rs.next()) {
 				hmap.put(i, rs.getInt(2));
-				//System.out.print( rs.getInt(2));
-				//System.out.format("%-30s %7s%n", rs.getString(1), hmap.get(i));
-				//System.out.println(hmap.size());
+				
 				while(i<hmap.size())
 					System.out.println(i);
 				System.out.format("%-30s %7s%n", rs.getString(1), i);
 
-				//System.out.println(hmap.get(i));
-				//System.out.println(hmap.key));
 				i++;
 			}
 			rs.close();
@@ -136,7 +130,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -144,7 +137,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -181,7 +173,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -189,7 +180,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -226,7 +216,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -234,7 +223,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -264,7 +252,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -272,7 +259,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -294,9 +280,7 @@ public class MySQL {
 			sqlselect = "INSERT INTO Users VALUES (?,?,?,?,?);";
 			sqlselect2 = "INSERT INTO Login VALUES (?,?,?) ;";
 
-			// sqlselect1="SELECT Number,idUser,Name,Status,typeid FROM Users;";
-			// Statement statement = con.createStatement();
-			// ResultSet rs1 = statement.executeQuery(sqlselect);
+			
 			stm = con.prepareStatement(sqlselect);
 			stm.setInt(1, a);
 			stm.setInt(2, b);
@@ -319,7 +303,6 @@ public class MySQL {
 			System.out.println("This user already exists");
 
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -327,9 +310,7 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-
-					// e1.printStackTrace();
+					
 				}
 			}
 		}
@@ -368,7 +349,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -376,7 +356,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -395,7 +374,6 @@ public class MySQL {
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection(MYSQLURL, USERNAME, PASS);
 			sqlselect = "INSERT INTO Messages (SenderId,ReceiverId,MessageData)\n" + "VALUES (?, ?, ?);";
-			// Statement statement = con.createStatement();
 			stm = con.prepareStatement(sqlselect);
 			stm.setInt(1, a);
 			stm.setInt(2, b);
@@ -406,7 +384,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -414,7 +391,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			}
@@ -450,7 +426,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -458,7 +433,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			}
@@ -475,7 +449,6 @@ public class MySQL {
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection(MYSQLURL, USERNAME, PASS);
 			sqlselect = "UPDATE Users\n" + "SET Status=?,typeid=?\n" + "WHERE Name=?;";
-			// Statement statement = con.createStatement();
 			stm = con.prepareStatement(sqlselect);
 
 			stm.setInt(1, a);
@@ -487,7 +460,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -495,7 +467,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			}
@@ -523,7 +494,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -531,7 +501,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			}
@@ -557,7 +526,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -565,7 +533,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			}
@@ -598,7 +565,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -606,7 +572,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -637,7 +602,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -645,7 +609,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -674,7 +637,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -682,7 +644,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -712,7 +673,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -720,7 +680,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -750,7 +709,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -758,7 +716,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -794,9 +751,8 @@ public class MySQL {
 
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
-		} // Always close the connection!!!!
+		} 
 		catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -804,7 +760,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -843,7 +798,6 @@ public class MySQL {
 		} catch (SQLException ex) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
@@ -851,7 +805,6 @@ public class MySQL {
 				try {
 					con.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
